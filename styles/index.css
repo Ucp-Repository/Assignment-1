@@ -1,7 +1,4 @@
 
-/* Campus Bites - Shared Stylesheet */
-
-/* CSS Variables */
 :root {
     --primary: #e76f35;
     --primary-dark: #c65320;
@@ -15,7 +12,6 @@
     --shadow: 0 8px 28px rgba(37, 42, 52, 0.07);
 }
 
-/* Reset */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -39,6 +35,7 @@ a {
 }
 
 /* Header and Navigation */
+
 .site-header {
     display: flex;
     align-items: center;
@@ -81,14 +78,8 @@ nav a.active {
     color: var(--primary-dark);
 }
 
-/* General Headings */
-h1,
-h2,
-h3 {
-    line-height: 1.25;
-}
-
 /* Hero Section - Home Page */
+
 .hero {
     display: grid;
     grid-template-columns: 1.3fr 0.7fr;
@@ -108,6 +99,12 @@ h3 {
     font-weight: 800;
     letter-spacing: 2px;
     margin-bottom: 12px;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.25;
 }
 
 .hero h1 {
@@ -148,6 +145,7 @@ h3 {
 }
 
 /* Buttons */
+
 .btn {
     display: inline-block;
     border: 2px solid var(--primary);
@@ -177,15 +175,8 @@ h3 {
     color: white;
 }
 
-/* Food Emoji */
-.food-emoji {
-    display: block;
-    font-size: 3.2rem;
-    margin-bottom: 16px;
-    line-height: 1.4;
-}
+/* Shared Sections */
 
-/* General Sections */
 .section {
     padding: 65px 9%;
 }
@@ -200,7 +191,6 @@ h3 {
     font-size: 2rem;
 }
 
-/* Grid Layout */
 .grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -208,7 +198,6 @@ h3 {
     margin-top: 28px;
 }
 
-/* Cards */
 .card {
     padding: 28px;
     border: 1px solid var(--border);
@@ -226,14 +215,25 @@ h3 {
     color: var(--muted);
 }
 
-/* Home Page Feature Icons */
 .icon {
     display: inline-block;
     font-size: 2rem;
     margin-bottom: 14px;
 }
 
-/* Menu Page */
+/* Home and Menu Page */
+
+.food-emoji {
+    display: block;
+    font-size: 3.2rem;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+.soft-section {
+    background: #fff2e7;
+}
+
 .category-title {
     font-size: 1.7rem;
     margin-bottom: 12px;
@@ -250,7 +250,8 @@ h3 {
     font-weight: 800;
 }
 
-/* Menu Page Banner */
+/* Page Banner - Menu and Feedback */
+
 .page-banner {
     padding: 65px 9%;
     text-align: center;
@@ -266,12 +267,82 @@ h3 {
     color: var(--muted);
 }
 
-/* Soft Background Section */
-.soft-section {
-    background: #fff2e7;
+/* Feedback and Contact Page */
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 40px;
+    align-items: start;
 }
 
-/* Home Page Call to Action */
+.contact-info > p {
+    color: var(--muted);
+    margin: 16px 0 28px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.contact-item .icon {
+    margin: 0;
+}
+
+.contact-item h3 {
+    font-size: 1.05rem;
+}
+
+.contact-item p {
+    color: var(--muted);
+    overflow-wrap: anywhere;
+}
+
+/* Feedback Form */
+
+.feedback-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.feedback-card label {
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.feedback-card input,
+.feedback-card select,
+.feedback-card textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #dfd5cb;
+    border-radius: 8px;
+    background: white;
+    color: var(--dark);
+    font: inherit;
+}
+
+.feedback-card input:focus,
+.feedback-card select:focus,
+.feedback-card textarea:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+.feedback-card textarea {
+    resize: vertical;
+}
+
+.feedback-card button {
+    margin-top: 12px;
+}
+
+/* Call to Action */
+
 .cta {
     padding: 55px 9%;
     text-align: center;
@@ -289,6 +360,7 @@ h3 {
 }
 
 /* Footer */
+
 footer {
     padding: 25px 7%;
     background: var(--dark);
@@ -302,7 +374,8 @@ footer p + p {
     margin-top: 4px;
 }
 
-/* Tablet Layout */
+/* Tablet Responsive Layout */
+
 @media (max-width: 900px) {
     .site-header {
         flex-direction: column;
@@ -327,9 +400,14 @@ footer p + p {
     .grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
 }
 
-/* Mobile Layout */
+/* Mobile Responsive Layout */
+
 @media (max-width: 600px) {
     .site-header {
         padding: 18px 5%;
