@@ -589,3 +589,100 @@ footer p + p {
         padding: 23px;
     }
 }
+
+
+/* Order Page CSS*/
+
+.order-steps {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+}
+
+.order-step-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    min-height: 285px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.order-step-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 32px rgba(37, 42, 52, 0.12);
+}
+
+.order-step-card .food-emoji {
+    display: grid;
+    place-items: center;
+    width: 66px;
+    height: 66px;
+    margin: 0 0 8px;
+    border-radius: 18px;
+    background: var(--soft);
+    font-size: 2.3rem;
+}
+
+.order-step-card h3 {
+    font-size: 1.15rem;
+}
+
+.order-step-card p {
+    flex-grow: 1;
+}
+
+.order-step-card .btn {
+    margin-top: 8px;
+}
+
+.order-info-section .contact-layout {
+    align-items: center;
+}
+
+.order-info-section .contact-info>p:not(.eyebrow) {
+    max-width: 520px;
+}
+
+.order-tips-card {
+    border-top: 4px solid var(--primary);
+}
+
+.order-tips-card ul {
+    margin: 8px 0 20px;
+    padding-left: 22px;
+    color: var(--muted);
+}
+
+.order-tips-card li {
+    padding-left: 4px;
+    margin-bottom: 10px;
+}
+
+.order-tips-card li::marker {
+    color: var(--primary);
+}
+
+.order-tips-card .btn {
+    margin-top: 8px;
+}
+
+/* Responsive layout for the order page */
+@media (max-width: 1100px) {
+    .order-steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .order-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .order-step-card {
+        min-height: auto;
+    }
+
+    .order-tips-card ul {
+        padding-left: 20px;
+    }
+}
